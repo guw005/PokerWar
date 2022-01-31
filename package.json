@@ -1,0 +1,29 @@
+{
+  "name": "pokerwar",
+  "version": "1.0.0",
+  "description": "aspen capital take home project by guanyao wang",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "server": "nodemon app.js",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix frontend && npm run build --prefix frontend"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/guw005/pokerwar.git"
+  },
+  "author": "guanyao wang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/guw005/pokerwar/issues"
+  },
+  "homepage": "https://github.com/guw005/pokerwar#readme",
+  "dependencies": {
+    "body-parser": "^1.19.1",
+    "express": "^4.17.2",
+    "mongoose": "^6.1.8"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}

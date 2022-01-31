@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300&display=swap');
+
+.main-page{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.players-container{
+    display: flex;
+    justify-content: center;
+    height: 30%;
+}
+
+.ultron-logo{
+    height:100%;
+}
+
+.vision-logo{
+    height: 100%;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+
+.game-container{
+    display: flex;
+    justify-content: space-between;
+    height: 60%;
+    /* padding-left: 2%; */
+    /* padding-right: 2%; */
+}
+
+.lower-area{
+
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    height: 10%;
+}
+
+.deck-container{
+    width: 20%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+.deck{
+    width: 200px;
+    height: 300px;
+    border: 5px solid black;
+    border-radius: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 75px;
+    font-weight: 900;
+    color: white;
+    font-family: 'Comic Neue', cursive;
+    background-image: radial-gradient(#507ed4 20%, transparent 20%),
+      radial-gradient(#fafafa 20%, transparent 20%);
+    background-color: #110670;
+    background-position: 0 0, 50px 50px;
+    background-size: 100px 100px;
+}
+
+.card-container{
+    width: 20%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+.card{
+    width: 200px;
+    height: 300px;
+    border: 5px solid black;
+    border-radius: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 75px;
+    transition: all .4s ease;
+    box-shadow: 20px 20px rgba(0,0,0,.15);
+    font-family: 'Comic Neue', cursive;
+}
+
+.card:hover {
+    /* border-radius: 0% 0% 50% 50% / 0% 0% 5% 5% ; */
+    box-shadow: 10px 10px rgba(0,0,0,.25);
+  }
+
+
+.deal-button-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.deal-button, .new-game-button{
+    padding: 10px 25px;
+    font-family: 'Comic Neue', cursive;
+    font-weight: 500;
+    background: transparent;
+    outline: none !important;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    /* border: 2px solid rgb(255, 255, 255); */
+    border: 2px solid black;
+    z-index: 3;
+    /* color: white; */
+    color:black;
+    text-align: center;
+}
+
+.deal-button:after, .new-game-button:after{
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 100%;
+    top: 0;
+    left: 0;
+    direction: rtl;
+    z-index: -1;
+    /* background: rgb(255, 255, 255); */
+    background: black;
+    transition: all 0.3s ease;
+}
+
+.deal-button:hover, .new-game-button:hover {
+    /* color: rgb(0, 0, 0); */
+    color: white
+}
+  
+.deal-button:hover:after, .new-game-button:hover:after {
+    left: auto;
+    right: 0;
+    width: 100%;
+}
+  
+.deal-button:active, .new-game-button:active {
+    top: 2px;
+}
+
+.current-winner-container{
+    padding: 1%;
+    font-family: 'Comic Neue', cursive;
+    font-size: 30px;
+}
+
+.current-Ultron-winner{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    /* font-family: 'Comic Neue', cursive; */
+    /* font-size: 17px; */
+}
+
+.current-Vision-winner{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    /* font-family: 'Comic Neue', cursive; */
+    /* font-size: 17px; */
+}
+
+.current-TIE-winner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Comic Neue', cursive;
+    font-size: 17px;
+}
+
+.war-deck-container{
+    position:absolute;
+    top: 70%;
+    display: flex;
+    height: 15%;
+    width: 100%;
+    justify-content: center;
+    font-family: 'Comic Neue', cursive;
+    font-size: 20px;
+    font-weight: 900;
+}
+
+.text-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 15%;
+}
+
+.war-deck-count-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 5%;
+    height: 100%;
+    width: 40px;
+    border: 1px solid black;
+    border-radius: 0.5rem;
+    background-image: radial-gradient(#507ed4 20%, transparent 20%),
+    radial-gradient(#fafafa 20%, transparent 20%);
+    background-color: #110670;
+    background-position: 0 0, 50px 50px;
+    background-size: 30px 30px;
+    color: white;
+}
+
+.x-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 5%;
+}
+
+/* .war-card-container{
+    display: flex;
+    width: 15%;
+}
+
+.war-card{
+    
+} */
+
+.game-over-container{
+    position: absolute;
+    z-index: 1;
+    left: 25%;
+    top: 10%;
+    height: 20%;
+    width: 50%;
+    border: 5px solid black;
+    /* border-radius: 0.5rem; */
+    /* background-color: white; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* justify-content: center; */
+    /* padding-top: 10%; */
+    background: white;
+    /* border-radius: 0% 0% 0% 0% / 0% 0% 0% 0% ; */
+    /* color: white; */
+    box-shadow: 20px 20px rgba(0,0,0,.15);
+    transition: all .4s ease;
+    font-family: 'Comic Neue', cursive;
+    font-size: 25px;
+}
+
+.game-over-container:hover {
+    /* border-radius: 0% 0% 50% 50% / 0% 0% 5% 5% ; */
+    box-shadow: 10px 10px rgba(0,0,0,.25);
+}
+
+.game-result{
+    font-size: 30px;
+    font-weight: 900;
+}

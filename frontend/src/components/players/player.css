@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300&display=swap');
+
+.player-container{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    justify-content: center;
+    align-content: center;
+    font-family: 'Comic Neue', cursive;
+    font-size: 20px;
+}
+
+#player-name{
+    font-weight: 900;
+}
+
+.player-info{
+    margin: 5px;
+    text-align: center;
+}
