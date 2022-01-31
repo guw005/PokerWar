@@ -26,8 +26,12 @@ const CARD_MAP = {
 class Game extends React.Component {
     constructor(props){
         super(props);
+
         this.deck = new Deck();
+        //test the end of the game by commenting out the line above and use the deck bellow
         // this.deck = new Deck([new Card("♥", "4"), new Card("♥", "4"), new Card("♥", "J")])
+
+
         this.deck.shuffle();
         let mid = Math.floor(this.deck.deck.length / 2);
         this.ultronDeck = this.deck.deck.slice(0, mid);
@@ -47,7 +51,6 @@ class Game extends React.Component {
         }
 
         this.deal = this.deal.bind(this);
-        // this.updateWin = this.updateWin.bind(this);
         this.war = this.war.bind(this);
         this.updateCurrentWinner = this.updateCurrentWinner.bind(this);
         this.renderButton = this.renderButton.bind(this);
@@ -79,7 +82,6 @@ class Game extends React.Component {
         setTimeout(() => {
             this.compare(ultronCard, visionCard)
         }, 2000)
-        // this.compare(ultronCard, visionCard);
     }
 
     compare(ultronCard, visionCard){
@@ -143,25 +145,15 @@ class Game extends React.Component {
             this.isWar = true;
             this.warDeck.push(ultronCard, visionCard);
             warDeckCount = this.warDeck.length;
-            // ultronDeckCount = this.ultronDeck.length;
-            // visionDeckCount = this.visionDeck.length;
             currentWinner = "TIE";
 
             this.setState({
                 ultronHand: null,
                 visionHand: null,
-                // ultronDeckCount, 
-                // visionDeckCount, 
                 currentWinner,
                 warDeckCount
             })
-            // const ultronCard = this.ultronDeck.shift();
-            // const visionCard = this.visionDeck.shift();
-            // const ultronHand = [ultronCard.suit, ultronCard.value];
-            // const visionHand = [visionCard.suit, visionCard.value];
-            
-    
-            // this.setState({ ultronHand, visionHand})
+
             this.checkWin();
             if(this.ultronDeck.length !== 0 && this.visionDeck.length !== 0){
                 setTimeout(this.war, 2000)
@@ -169,14 +161,6 @@ class Game extends React.Component {
             
             
         }
-
-        // this.updateCurrentWinner(currentWinner);
-
-        // this.setState({
-        //     ultronDeckCount, 
-        //     visionDeckCount, 
-        //     currentWinner: currentWinner.name
-        // })
     }
 
 
