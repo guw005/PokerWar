@@ -12,7 +12,7 @@ The website is being Hosted on http://peaceful-beach-62138.herokuapp.com/#/
 ## Start the game
 The total numbers of winning rounds and winning games are shown next to the player pics.
 
-Click on deal button to deal one card to each player(Ultron & Vision). After the comparing the value, the player's deck number will be upadted and the number of winnig rounds will also be updated.
+Click on deal button and one card will be dealt to each player(Ultron & Vision) and the cards will be shown for TWO SECONDS. After the comparing the value, the player's deck number will be upadted and the number of winnig rounds will also be updated.
 
 ## War process
 When the hand cards have same value, the war process will begin. A war deck will appear on the page showing the number of facedown cards that will eventually push to bottom of winner's deck.
